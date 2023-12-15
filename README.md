@@ -58,7 +58,7 @@ Notes
 Ensure you have an active internet connection to fetch stock data.
 The app assumes 20 business days in a month for predicting future dates.
 
-Libraries Used
+Libraries Used:
 yfinance
 pandas
 scikit-learn
@@ -66,4 +66,5 @@ streamlit
 
 
 Disclaimer
-This app provides stock price predictions for informational purposes only. Predictions may not be accurate, and users should not solely rely on them for financial decisions. Always consult with a financial advisor before making investment decisions.
+
+This app provides stock price predictions for informational and entertainment purposes only. Predictions may not be accurate, and users should not solely rely on them for financial decisions. Always consult with a financial advisor before making investment decisions.
