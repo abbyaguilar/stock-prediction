@@ -11,9 +11,12 @@ import yfinance as yf
 # Function to fetch historical stock data
 def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
+
+    # Explicitly localize the index to UTC
+    if isinstance(data.index, pd.DatetimeIndex) and data.index.tz is None:
+        data.index = data.index.tz_localize("UTC")
+
     return data
-
-
     
 # Function to preprocess data and create features
 def preprocess_data(data):
