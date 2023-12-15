@@ -15,7 +15,7 @@ Create Virtual Environment:
 
   python -m venv venv
   
-Activate Virtual Environment
+Activate Virtual Environment:
 
 On Windows:
 
@@ -25,11 +25,11 @@ On macOS/Linux:
   
   source venv/bin/activate
   
-Install Dependencies
+Install Dependencies:
 
   pip install -r requirements.txt
   
-Usage
+Usage:
 
   streamlit run stock_predictor_app.py
   
