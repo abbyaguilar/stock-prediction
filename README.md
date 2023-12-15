@@ -5,12 +5,13 @@ This is a Python application for forecasting stock prices using historical data 
 
 Installation
 
-Clone the Repository
+Clone the Repository:
 
   git clone https://github.com/yourusername/stock-predictor.git
+  
   cd stock-predictor
   
-Create Virtual Environment
+Create Virtual Environment:
 
   python -m venv venv
   
