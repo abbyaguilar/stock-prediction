@@ -6,15 +6,13 @@ from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
 import streamlit as st
 
+import yfinance as yf
+
 # Function to fetch historical stock data
 def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
-    
-    # Ensure that the index is a DateTimeIndex without time zone
-    if isinstance(data.index, pd.DatetimeIndex):
-        data.index = pd.to_datetime(data.index).tz_localize(None)
-    
     return data
+
 
     
 # Function to preprocess data and create features
