@@ -10,11 +10,12 @@ import streamlit as st
 def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
     
+    # Ensure that the index is a DateTimeIndex without time zone
     if isinstance(data.index, pd.DatetimeIndex):
-        # Convert index to DateTimeIndex
-        data.index = pd.to_datetime(data.index)
+        data.index = pd.to_datetime(data.index).tz_localize(None)
     
     return data
+
     
 # Function to preprocess data and create features
 def preprocess_data(data):
