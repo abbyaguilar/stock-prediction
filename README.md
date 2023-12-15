@@ -1,4 +1,4 @@
-#Stock Price Forecasting App
+Stock Price Forecasting App
 
 Overview
 This is a Python application for forecasting stock prices using historical data and machine learning techniques. The app is built with Streamlit and utilizes the yfinance library for fetching stock data and scikit-learn for building a Gradient Boosting Regressor model.
@@ -7,7 +7,7 @@ Installation
 
 Clone the Repository:
 
-  git clone https://github.com/yourusername/stock-predictor.git
+  git clone https://github.com/abbyaguilar/stock-predictor.git
   
   cd stock-predictor
   
