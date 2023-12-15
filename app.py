@@ -107,7 +107,7 @@ def predict_future_open_prices(model, scaler, X_future):
     return future_open_predictions
 
 # Streamlit UI
-st.title("Stock Price Forecasting App")
+st.title("Stock Price Forecasting App: This is not financial advice")
 
 # Get user input for the stock ticker and date range
 ticker = st.text_input("Enter Stock Ticker (e.g., AAPL):", "AAPL")
