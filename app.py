@@ -9,7 +9,10 @@ import streamlit as st
 # Function to fetch historical stock data
 def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
+    data.index = pd.to_datetime(data.index)  # Convert index to DateTimeIndex
+    data.index = data.index.tz_localize("UTC").tz_convert("UTC")  # Add this line to localize and convert the timezone
     return data
+
 
 # Function to preprocess data and create features
 def preprocess_data(data):
