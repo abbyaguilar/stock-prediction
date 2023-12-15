@@ -13,11 +13,13 @@ def get_stock_data(ticker, start_date, end_date):
     if isinstance(data.index, pd.DatetimeIndex):
         # Convert index to DateTimeIndex
         data.index = pd.to_datetime(data.index)
-        # Localize and convert the timezone
-        data.index = data.index.tz_localize("UTC").tz_convert("UTC")
+        # Check if the timezone is already set
+        if data.index.tz is None:
+            # Localize and convert the timezone
+            data.index = data.index.tz_localize("UTC").tz_convert("UTC")
     
     return data
-
+    
 # Function to preprocess data and create features
 def preprocess_data(data):
     data['Date'] = data.index
