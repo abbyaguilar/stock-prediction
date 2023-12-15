@@ -1,3 +1,4 @@
+# not financial advice, this is a personal project testing yfinance 
 import yfinance as yf
 import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -28,7 +29,7 @@ def preprocess_data(data):
     return data
 
 # Function to train the model
-def train_model(X, y):
+def train_model(
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
 
     # Standardize features
